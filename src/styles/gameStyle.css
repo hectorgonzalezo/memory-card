@@ -1,0 +1,19 @@
+#game {
+    display: flex;
+    flex-direction: column;
+}
+
+#score-area{
+    flex-basis: 100px;
+    flex-shrink: 1;
+}
+
+#cards-area{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 30px;
+    gap: 20px;
+}
