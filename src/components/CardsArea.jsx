@@ -1,4 +1,5 @@
-import { shuffleCards, getRandomCharactersIDs } from '../auxiliaries/cardsAreaHelpers';
+import { getRandomCharactersIDs } from '../auxiliaries/cardsAreaHelpers';
+import { shuffle } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import Card from './Card'
 
@@ -34,16 +35,8 @@ function CardsArea(props){
         }
     }
 
-    function randomizeCards(){
-        if(cards.length > 1){
-            console.log('randomized')
-        setCards(shuffleCards(cards))
-        }
-    }
-
     function clickCard(e){
         if(!pressedCards.includes(e.target.id)){
-            console.log('pressedcards updated')
             setPressedCards(prevCards => [...prevCards, e.target.id])
         }
     }
@@ -57,21 +50,24 @@ function CardsArea(props){
 
     // Reorders cards randomly on press
     useEffect(() => {
-        randomizeCards()
+        // Shuffle cards
+        if(cards.length > 1){
+            setCards(shuffle(cards))
+        }
     }, [pressedCards])
 
 
     return (
       <div id="cards-area">
-        {cards.map((card) => (
-          <Card
+        {cards.map((card) => {
+          return <Card
             key={card.name}
             id={card.name}
             name={card.name}
             image={card.image}
             clickFunc={clickCard}
           />
-        ))}
+        })}
       </div>
     );
 }
