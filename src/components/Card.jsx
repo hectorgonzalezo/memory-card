@@ -3,9 +3,9 @@ import '../styles/cardStyle.css'
 
 function Card(props){
     return (
-        <div className='card' onClick={props.clickFunc} id={props.id}>
-            <img src={props.image} alt="" id={props.id}/>
-            <p id={props.id}>{props.name}</p>
+        <div className='card' onClick={props.clickFunc} data={props.data}>
+            <img src={props.image} alt="" data={props.data}/>
+            <p data={props.data}>{props.name}</p>
         </div>
     )
 }

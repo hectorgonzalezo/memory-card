@@ -36,8 +36,9 @@ function CardsArea(props){
     }
 
     function clickCard(e){
-        if(!pressedCards.includes(e.target.id)){
-            setPressedCards(prevCards => [...prevCards, e.target.id])
+        const cardName = e.target.getAttribute('data');
+        if(!pressedCards.includes(cardName)){
+            setPressedCards(prevCards => [...prevCards, cardName])
         }
     }
 
@@ -52,7 +53,11 @@ function CardsArea(props){
     useEffect(() => {
         // Shuffle cards
         if(cards.length > 1){
-            setCards(shuffle(cards))
+            const shuffledCards = shuffle([...cards])
+            setCards([...cards]);
+            setTimeout(() => {
+                setCards(shuffledCards)
+            }, 0);
         }
     }, [pressedCards])
 
@@ -62,7 +67,7 @@ function CardsArea(props){
         {cards.map((card) => {
           return <Card
             key={card.name}
-            id={card.name}
+            data={card.name}
             name={card.name}
             image={card.image}
             clickFunc={clickCard}
