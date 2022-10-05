@@ -1,19 +1,28 @@
 @import './reset.css';
 
+@font-face {
+    font-family: 'RickAndMorty';
+    src: local('RickAndMorty'), url('../fonts/get_schwifty-webfont.woff') format('woff');
+    src: local('RickAndMorty2'), url('../fonts/get_schwifty-webfont.woff2') format('woff2');
+  }
+  
+
 :root{
     --color-background: #44281d;
     --color-portal: #97ce4c;
     --color-morty-shirt: #f0e14a;
+    --color-font: #15adc7;
+    --img-size: 250px;
 }
 
 .App{
-    height: 100vh;
+    min-height: 100vh;
     display: grid; 
     grid-template-rows: 100px 1fr 50px;
     position: relative;
 }
 
-.App::before{
+.App::after{
     content: '';
     background: url('../assets/background.png') no-repeat;
     background-size: cover;
