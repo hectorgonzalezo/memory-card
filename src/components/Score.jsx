@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import uniquid from "uniquid";
 
 function Score(props) {
   // This is used to shake the score when updating
@@ -21,7 +20,7 @@ function Score(props) {
 
   return (
     <div id="score-area" className={props.className}>
-      <h3 className={shakeLevel}>Level {props.level}</h3>
+      <h3 className={shakeLevel} key={props.level}>Level {props.level}</h3>
       <h2 id="current-score" className={shakeCurrent} key={props.current + '0'}>
         Score: {props.current}
       </h2>

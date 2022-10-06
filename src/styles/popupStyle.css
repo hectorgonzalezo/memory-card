@@ -23,6 +23,15 @@
         animation: 1s shakeLetters infinite alternate;
 }
 
+#pop-up h4{
+    font-size: 1.3rem;
+    color: var(--color-background)
+}
+#pop-up i{
+    font-size: 1.5rem;
+    color: rgb(202, 49, 49);
+}
+
 #pop-up.visible{
     width: 400px;
     margin-left: auto;
