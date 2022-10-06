@@ -12,6 +12,14 @@
     align-items: center;
 }
 
+#score-area h3{
+    font-size: 2rem;
+    font-family: rickAndMorty;
+    font-style: italic;
+    padding: 3px;
+    border-bottom: 3px solid var(--color-portal);
+}
+
 #score-area h2{
     font-size: 1.5rem;
     padding: 10px 20px 10px 20px;
@@ -20,12 +28,16 @@
     color: black;
 }
 
-#score-area h2:first-child{
+#score-area #current-score{
     background-color: var(--color-morty-shirt);
 }
 
-#score-area h2:nth-child(2){
+#score-area #best-score{
     background-color: rgb(78, 172, 212);
+}
+
+.shake{
+    animation: shake 0.5s;
 }
 
 #cards-area{
@@ -35,5 +47,19 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fill, var(--img-size));
     padding: 30px;
-    gap: 20px;
+    gap: 25px;
 }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

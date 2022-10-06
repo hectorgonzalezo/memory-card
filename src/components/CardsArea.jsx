@@ -1,9 +1,9 @@
 import { getRandomCharactersIDs } from '../auxiliaries/cardsAreaHelpers';
-import useScore from '../hooks/useScore';
 import { shuffle } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import swoosh from '../assets/swoosh.mp3';
+import uniquid from 'uniquid';
 
 const audio = new Audio(swoosh);
 
@@ -11,6 +11,7 @@ function CardsArea(props){
     const [cards, setCards] = useState([]);
     // Keeps track of cards that have been pressed already
     let[pressedCards, setPressedCards] = useState([]);
+    // changes depending on the level of the game
 
     // This is used to stop an extra api call with react strict mode.
     let fetched = false;
@@ -19,7 +20,8 @@ function CardsArea(props){
     async function getCharacters(){
         fetched = true;
         try{
-        await fetch(`https://rickandmortyapi.com/api/character/${getRandomCharactersIDs(5)}`, {
+            setCards([]);
+        await fetch(`https://rickandmortyapi.com/api/character/${getRandomCharactersIDs(props.cardsNum)}`, {
           method: "GET",
           mode: "cors",
         })
@@ -41,31 +43,29 @@ function CardsArea(props){
         const cardName = e.target.getAttribute('data');
         if(!pressedCards.includes(cardName)){
             setPressedCards(prevCards => [...prevCards, cardName])
+        } else{
+            console.log('card pressed already')
         }
     }
-
-    // fetch data from api on mount
-    useEffect(() => {
-        if(!fetched){
-            getCharacters();
-        }
-    }, [])
 
     // Reorders cards randomly on press
     useEffect(() => {
         // Shuffle cards
         if(cards.length > 1){
             const shuffledCards = shuffle([...cards])
-            setCards([]);
-            setTimeout(() => {
-                setCards(shuffledCards)
-                audio.play();
-            }, 0);
-
+            setCards(shuffledCards)
+            audio.play();
         // update score
         props.onHit();
         }
-    }, [pressedCards])
+    }, [pressedCards]);
+
+    // Fetch new cards when level changes
+    useEffect(() =>{
+        if(!fetched){
+        getCharacters();
+        }
+    }, [props.cardsNum])
 
 
     return (
@@ -73,7 +73,7 @@ function CardsArea(props){
         {cards.map((card) => {
           return <Card
             className='card'
-            key={card.name}
+            key={card.name+ uniquid()}
             data={card.name}
             name={card.name}
             image={card.image}
