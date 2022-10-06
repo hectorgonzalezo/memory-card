@@ -1,8 +1,10 @@
 import { getRandomCharactersIDs } from '../auxiliaries/cardsAreaHelpers';
 import { shuffle } from 'lodash';
 import React, { useEffect, useState } from 'react';
-import Card from './Card'
+import Card from './Card';
+import swoosh from '../assets/swoosh.mp3';
 
+const audio = new Audio(swoosh);
 
 
 function CardsArea(props){
@@ -58,6 +60,7 @@ function CardsArea(props){
             setTimeout(() => {
                 setCards(shuffledCards)
             }, 0);
+            audio.play();
         }
     }, [pressedCards])
 
