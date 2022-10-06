@@ -44,7 +44,7 @@ function CardsArea(props){
         if(!pressedCards.includes(cardName)){
             setPressedCards(prevCards => [...prevCards, cardName])
         } else{
-            console.log('card pressed already')
+            props.onMiss();
         }
     }
 

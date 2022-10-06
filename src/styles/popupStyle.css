@@ -1,0 +1,75 @@
+#pop-up{
+    background-color: var(--color-portal);
+    position: absolute;
+    left: -100%;
+    display: none;
+    opacity: 0;
+    padding: 50px;
+    flex-direction: column;
+}
+
+#pop-up:hover{
+    cursor:auto;
+    outline: 0px;
+}
+
+#pop-up h3{
+    color: var(--color-font);
+        font-size: 4rem;
+        font-family: rickAndMorty;
+        font-style: italic;
+        padding: 3px;
+        border-bottom: 3px solid var(--color-portal);
+        animation: 1s shakeLetters infinite alternate;
+}
+
+#pop-up.visible{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    opacity: 1;
+    transition: opacity 1s;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+button{
+    font-family: 'Permanent Marker';
+    font-size: 1.5rem;
+    border-radius: 0.8rem;
+    border: none;
+    background-color: var(--color-morty-shirt);
+    color: var(--color-font);
+    padding: 4px 10px 4px 10px;
+    position: relative;
+    box-shadow: 2px 2px 3px black;
+}
+
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(109, 109, 11);
+    color: white;
+}
+
+button:active{
+    bottom: -1px;
+    right: -1px;
+    box-shadow: 1px 1px 1px black;
+}
+
+
+@keyframes shakeLetters {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+  }

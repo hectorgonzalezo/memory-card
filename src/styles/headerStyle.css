@@ -7,12 +7,12 @@
 
 header h1{
     font-family: rickAndMorty;
-    font-size: 3.3rem;
+    border-radius: 1rem;
+    font-size: 5rem;
     margin: 1em 0 0.5em 0;
     letter-spacing: 0.1rem;
-    font-weight: bold;
-    color: var(--color-portal);
-    text-shadow: 0 1px var(--color-complementary-light), 0 3px var(--color-light);
+    color: rgb(86, 219, 234);
+    -webkit-text-stroke: 1px var(--color-portal)
 }
 
 header p{

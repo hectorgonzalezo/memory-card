@@ -16,16 +16,16 @@ function Score(props) {
   }, [props.best]);
 
   useEffect(() => {
-    setShakeBest('shake')
+    setShakeLevel('shake')
 }, [props.level]);
 
   return (
-    <div id="score-area" key={uniquid()}>
+    <div id="score-area" >
       <h3 className={shakeLevel}>Level {props.level}</h3>
-      <h2 id="current-score" className={shakeCurrent}>
+      <h2 id="current-score" className={shakeCurrent} key={uniquid()}>
         Score: {props.current}
       </h2>
-      <h2 id="best-score" className={shakeBest}>Best Score: {props.best}</h2>
+      <h2 id="best-score" className={shakeBest} key={uniquid()}>Best Score: {props.best}</h2>
     </div>
   );
 }

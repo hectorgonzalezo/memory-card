@@ -1,6 +1,7 @@
 #game {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #score-area{
@@ -13,7 +14,7 @@
 }
 
 #score-area h3{
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: rickAndMorty;
     font-style: italic;
     padding: 3px;
