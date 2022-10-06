@@ -22,10 +22,10 @@ function Score(props) {
   return (
     <div id="score-area" className={props.className}>
       <h3 className={shakeLevel}>Level {props.level}</h3>
-      <h2 id="current-score" className={shakeCurrent} key={uniquid()}>
+      <h2 id="current-score" className={shakeCurrent} key={props.current + '0'}>
         Score: {props.current}
       </h2>
-      <h2 id="best-score" className={shakeBest} key={uniquid()}>Best Score: {props.best}</h2>
+      <h2 id="best-score" className={shakeBest} key={props.best}>Best Score: {props.best}</h2>
     </div>
   );
 }

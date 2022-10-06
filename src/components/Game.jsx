@@ -7,6 +7,7 @@ import '../styles/gameStyle.css'
 
 function Game(){
     const [score, setScore] = useState(0);
+    const [previousBestScore, setPreviousBestScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
     const [level, setLevel] = useState(1);
     const [cardAmount, setCardAmount] = useState(4);
@@ -22,7 +23,10 @@ function Game(){
     // update best score
     useEffect(() => {
         if(bestScore < score){
-            setBestScore(score)
+            setBestScore(score);
+            if(previousBestScore < score){
+                setPreviousBestScore(score);
+            }
         }
         // If player guessed all the cards in current batch, go to next level
         if(score === cardsSoFar){
@@ -57,7 +61,7 @@ function Game(){
 
     return (
         <div id="game" >
-            <Score level={level} current={score} best={bestScore} className={gameInactive}/>
+            <Score level={level} current={score} best={previousBestScore} className={gameInactive}/>
             <CardsArea cardsNum={cardAmount} onHit={updateScore} onMiss={looseGame} className={gameInactive}/>
             <Popup visible={popupShown} buttonClick={restartGame}/>
         </div>
