@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Score from './Score';
 import CardsArea from './CardsArea';
 import Popup from './Popup'
+import uniquid from 'uniquid';
 import '../styles/gameStyle.css'
 
 function Game(){
@@ -11,7 +12,8 @@ function Game(){
     const [cardAmount, setCardAmount] = useState(4);
     const [cardsSoFar, setCardsSoFar] = useState(4);
 
-    const [popupShown, setPopupShown] = useState(false);
+    const [gameInactive, setGameInactive]= useState('');
+    const [popupShown, setPopupShown] = useState('');
 
     function updateScore(){
         setScore(score+1)
@@ -31,16 +33,33 @@ function Game(){
     }, [score]
     )
 
-    function restartGame(){
-        console.log('restart')
+    function looseGame(){
+        setPopupShown('visible');
+        setGameInactive('inactive')
+    }
 
+    function restartGame(){
+        // Restart div visibilities
+        setPopupShown('');
+        setGameInactive('');
+
+        // Restart game variables
+        setScore(0);
+        setLevel(1);
+        setCardAmount(0);
+        
+        setTimeout(() => {
+        setCardAmount(4);
+        }, 0);
+        
+        setCardsSoFar(4);
     }
 
     return (
-        <div id="game">
-            <Score level={level} current={score} best={bestScore}/>
-            <CardsArea cardsNum={cardAmount} onHit={updateScore} onMiss={restartGame}/>
-            <Popup />
+        <div id="game" >
+            <Score level={level} current={score} best={bestScore} className={gameInactive}/>
+            <CardsArea cardsNum={cardAmount} onHit={updateScore} onMiss={looseGame} className={gameInactive}/>
+            <Popup visible={popupShown} buttonClick={restartGame}/>
         </div>
     )
 }

@@ -6,7 +6,7 @@ import './styles/appStyle.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className={"App " + ""}>
     <Header />
     <Game />
     <Footer projectName="memory-card" />

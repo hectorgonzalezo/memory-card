@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/popupStyle.css';
 
-function Popup(){
+function Popup(props){
     return (
-        <div id='pop-up' className='visible card'>
+        <div id='pop-up' className={'card ' + props.visible}>
         <h3>You lost!</h3>
-        <button>Restart Game</button>
+        <button onClick={props.buttonClick}>Restart Game</button>
         </div>
     )
 }

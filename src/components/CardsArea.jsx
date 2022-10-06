@@ -20,6 +20,9 @@ function CardsArea(props){
     async function getCharacters(){
         fetched = true;
         try{
+            if(props.cardsNum === 0){
+                return
+            }
             setCards([]);
         await fetch(`https://rickandmortyapi.com/api/character/${getRandomCharactersIDs(props.cardsNum)}`, {
           method: "GET",
@@ -45,6 +48,7 @@ function CardsArea(props){
             setPressedCards(prevCards => [...prevCards, cardName])
         } else{
             props.onMiss();
+            setCards([])
         }
     }
 
@@ -53,7 +57,11 @@ function CardsArea(props){
         // Shuffle cards
         if(cards.length > 1){
             const shuffledCards = shuffle([...cards])
+            setCards([])
+            setTimeout(() => {
+                
             setCards(shuffledCards)
+            }, 0);
             audio.play();
         // update score
         props.onHit();
@@ -62,18 +70,19 @@ function CardsArea(props){
 
     // Fetch new cards when level changes
     useEffect(() =>{
+        console.log('cards')
         if(!fetched){
-        getCharacters();
+            getCharacters();
         }
     }, [props.cardsNum])
 
 
     return (
-      <div id="cards-area">
+      <div id="cards-area" className={props.className}>
         {cards.map((card) => {
           return <Card
             className='card'
-            key={card.name+ uniquid()}
+            key={card.name}
             data={card.name}
             name={card.name}
             image={card.image}
