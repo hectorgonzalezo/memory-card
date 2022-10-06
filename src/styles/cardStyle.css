@@ -8,16 +8,16 @@
     justify-content: space-between;
     border-radius: 1rem;
     animation: createBox 0.5s;
+    box-shadow: 5px 5px 10px black;
 }
 
 .card:hover{
     cursor: pointer;
-    outline: 3px solid var(--color-portal);
+    outline: 3px solid var(--color-morty-shirt);
 }
 
 .card p{
     padding: 8px;
-    font-family: rickAndMorty;
     font-size: 1.4rem;
     color: var(--color-font);
 }

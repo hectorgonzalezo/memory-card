@@ -4,7 +4,8 @@ function Score(props){
 
     return (
         <div id='score-area'>
-            <h1>Here goes the score</h1>
+            <h2>Score</h2>
+            <h2>Best Score</h2>
         </div>
     )
 }

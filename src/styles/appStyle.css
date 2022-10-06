@@ -1,4 +1,5 @@
 @import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 @font-face {
     font-family: 'RickAndMorty';
@@ -9,16 +10,17 @@
 
 :root{
     --color-background: #44281d;
-    --color-portal: #97ce4c;
+    --color-portal: #76a731;
     --color-morty-shirt: #f0e14a;
-    --color-font: #1d6673;
+    --color-font: #144f5a;
     --img-size: 250px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .App{
     min-height: 100vh;
     display: grid; 
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: auto 1fr 50px;
     position: relative;
     background-color: var(--color-background);
 }

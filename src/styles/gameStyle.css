@@ -4,8 +4,28 @@
 }
 
 #score-area{
-    flex-basis: 100px;
+    flex-basis: 60px;
     flex-shrink: 1;
+    display: flex;
+    color: var(--color-portal);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#score-area h2{
+    font-size: 1.5rem;
+    padding: 10px 20px 10px 20px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px black;
+    color: black;
+}
+
+#score-area h2:first-child{
+    background-color: var(--color-morty-shirt);
+}
+
+#score-area h2:nth-child(2){
+    background-color: rgb(78, 172, 212);
 }
 
 #cards-area{
