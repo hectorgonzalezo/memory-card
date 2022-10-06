@@ -11,7 +11,7 @@
     --color-background: #44281d;
     --color-portal: #97ce4c;
     --color-morty-shirt: #f0e14a;
-    --color-font: #15adc7;
+    --color-font: #1d6673;
     --img-size: 250px;
 }
 
@@ -20,9 +20,10 @@
     display: grid; 
     grid-template-rows: 100px 1fr 50px;
     position: relative;
+    background-color: var(--color-background);
 }
 
-.App::after{
+/* header::after{
     content: '';
     background-image: url('../assets/background.png');
     background-size: cover;
@@ -35,7 +36,7 @@
     height: 100%;
     z-index: -1;   
     transition: all 1s;
-}
+} */
 
 * {
     /* outline: dashed red; */

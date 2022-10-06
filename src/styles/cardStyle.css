@@ -1,6 +1,6 @@
 .card {
-    outline: 1px solid var(--color-background);
-    background-color: var(--color-background);
+    outline: 1px solid var(--color-portal);
+    background-color: var(--color-portal);
     color: var(--color-background);
     display: flex;
     flex-direction: column;

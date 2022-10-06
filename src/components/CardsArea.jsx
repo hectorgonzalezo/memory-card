@@ -56,11 +56,11 @@ function CardsArea(props){
         // Shuffle cards
         if(cards.length > 1){
             const shuffledCards = shuffle([...cards])
-            setCards([...cards]);
+            setCards([]);
             setTimeout(() => {
                 setCards(shuffledCards)
+                audio.play();
             }, 0);
-            audio.play();
         }
     }, [pressedCards])
 
@@ -69,6 +69,7 @@ function CardsArea(props){
       <div id="cards-area">
         {cards.map((card) => {
           return <Card
+            className='card'
             key={card.name}
             data={card.name}
             name={card.name}

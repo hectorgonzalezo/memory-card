@@ -6,7 +6,7 @@
     height: 50px;
     width: 100%;
     gap: 2vw;
-    color: rgb(74, 31, 31);
+    color: var(--color-portal);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
       Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1.5rem;
