@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/hectorgonzalezo.github.io/memory-card/static/css/main.12bbc6ad.css",
+    "main.js": "/hectorgonzalezo.github.io/memory-card/static/js/main.719aca3f.js",
+    "static/media/get_schwifty-webfont.woff": "/hectorgonzalezo.github.io/memory-card/static/media/get_schwifty-webfont.303c575e4cc2c969613d.woff",
+    "static/media/get_schwifty-webfont.woff2": "/hectorgonzalezo.github.io/memory-card/static/media/get_schwifty-webfont.eaaee9f024234a312fd2.woff2",
+    "static/media/swoosh.mp3": "/hectorgonzalezo.github.io/memory-card/static/media/swoosh.f532698c6afc38720e31.mp3",
+    "index.html": "/hectorgonzalezo.github.io/memory-card/index.html",
+    "main.12bbc6ad.css.map": "/hectorgonzalezo.github.io/memory-card/static/css/main.12bbc6ad.css.map",
+    "main.719aca3f.js.map": "/hectorgonzalezo.github.io/memory-card/static/js/main.719aca3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12bbc6ad.css",
+    "static/js/main.719aca3f.js"
+  ]
+}
