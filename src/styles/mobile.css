@@ -5,7 +5,8 @@
 
     .App #cards-area{
         grid-template-columns: repeat(auto-fit, var(--new-img-size));
-        gap: 15px;
+        gap: 10px;
+        align-items: start;
     }
 
     .card{
@@ -20,7 +21,7 @@
     }
 
     .card p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     #pop-up h3{
