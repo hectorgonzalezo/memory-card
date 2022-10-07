@@ -3,8 +3,11 @@
 
 by Héctor Gonzalez Orozco
 
-Built as part of [The Odin Project](https://www.theodinproject.com/) curriculum.
+Built using React as part of [The Odin Project](https://www.theodinproject.com/) curriculum.
 
+It's  a memory card game using Rick and Morty characters. The rules are simple: click twice on a card and it's game over. The number of cards keeps increasing on each level.
+
+I made this game as practice with React hooks.
 
 ## Live Preview
 
