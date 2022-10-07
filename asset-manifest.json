@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hectorgonzalezo.github.io/memory-card/static/css/main.233841da.css",
-    "main.js": "/hectorgonzalezo.github.io/memory-card/static/js/main.f0284b9c.js",
-    "static/media/get_schwifty-webfont.woff": "/hectorgonzalezo.github.io/memory-card/static/media/get_schwifty-webfont.303c575e4cc2c969613d.woff",
-    "static/media/get_schwifty-webfont.woff2": "/hectorgonzalezo.github.io/memory-card/static/media/get_schwifty-webfont.eaaee9f024234a312fd2.woff2",
-    "static/media/swoosh.mp3": "/hectorgonzalezo.github.io/memory-card/static/media/swoosh.f532698c6afc38720e31.mp3",
-    "index.html": "/hectorgonzalezo.github.io/memory-card/index.html",
-    "main.233841da.css.map": "/hectorgonzalezo.github.io/memory-card/static/css/main.233841da.css.map",
-    "main.f0284b9c.js.map": "/hectorgonzalezo.github.io/memory-card/static/js/main.f0284b9c.js.map"
+    "main.css": "/memory-card/static/css/main.1d0501f8.css",
+    "main.js": "/memory-card/static/js/main.3d5332a2.js",
+    "static/media/get_schwifty-webfont.woff": "/memory-card/static/media/get_schwifty-webfont.303c575e4cc2c969613d.woff",
+    "static/media/get_schwifty-webfont.woff2": "/memory-card/static/media/get_schwifty-webfont.eaaee9f024234a312fd2.woff2",
+    "static/media/swoosh.mp3": "/memory-card/static/media/swoosh.f532698c6afc38720e31.mp3",
+    "index.html": "/memory-card/index.html",
+    "main.1d0501f8.css.map": "/memory-card/static/css/main.1d0501f8.css.map",
+    "main.3d5332a2.js.map": "/memory-card/static/js/main.3d5332a2.js.map"
   },
   "entrypoints": [
-    "static/css/main.233841da.css",
-    "static/js/main.f0284b9c.js"
+    "static/css/main.1d0501f8.css",
+    "static/js/main.3d5332a2.js"
   ]
 }
