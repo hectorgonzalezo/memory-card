@@ -1,5 +1,5 @@
 @import './reset.css';
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 @font-face {
     font-family: 'RickAndMorty';
@@ -14,7 +14,8 @@
     --color-morty-shirt: #f0e14a;
     --color-font: #144f5a;
     --img-size: 200px;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Kalam', cursive;
+    font-size: 17px;
 }
 
 .App{
