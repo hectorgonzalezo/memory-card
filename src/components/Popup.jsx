@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/popupStyle.css';
+import '../styles/mobile.css'
 
 function Popup(props){
     return (

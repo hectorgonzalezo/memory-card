@@ -33,7 +33,7 @@
 }
 
 #pop-up.visible{
-    width: 450px;
+    width: min(50vw, 450px);
     margin-left: auto;
     margin-right: auto;
     top: 0;

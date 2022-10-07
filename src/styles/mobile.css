@@ -1,0 +1,37 @@
+@media (max-width: 600px){
+    :root{
+        --new-img-size: 120px;
+    }
+
+    .App #cards-area{
+        grid-template-columns: repeat(auto-fit, var(--new-img-size));
+        gap: 15px;
+    }
+
+    .card{
+        height: auto;
+        width: var(--new-img-size)
+    }
+
+    .card > img{
+        height: var(--new-img-size);
+        width: var(--new-img-size);
+        border-radius: 1rem;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+    }
+
+    #pop-up h3{
+        font-size: 2rem;
+    }
+
+    #pop-up h4{
+        font-size: 1.2rem;
+    }
+
+    button{
+        font-size: 1.3rem;
+    }
+}

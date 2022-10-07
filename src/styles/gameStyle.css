@@ -15,22 +15,22 @@
 }
 
 #score-area h3{
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 3rem);
     font-family: rickAndMorty;
     font-style: italic;
     padding: 3px;
     animation: highlightLevel 2s;
     z-index: 10;
-    color: rgb(13, 13, 137);
+    color: var(--color-font);
 
-    background-color: rgb(227, 97, 97);
+    background-color: rgb(240, 179, 179);
     padding: 12px;
     border-radius: 2rem;
     box-shadow: 5px 5px 10px black;
 }
 
 #score-area h2{
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-size: clamp(1rem, 3vw, 1.6rem);
     padding: 10px 20px 10px 20px;
     border-radius: 1rem;
     box-shadow: 5px 5px 10px black;
@@ -58,7 +58,7 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fit, var(--img-size));
     padding: 30px;
-    gap: 25px;
+    gap: 35px;
 }
 
 .inactive{
@@ -84,8 +84,7 @@
   @keyframes highlightLevel {
     0% { }
     50%{ 
-        transform: translate(20vw, 20vh); 
-        font-size: 5rem;
+        transform: translate(20vw, 20vh) scale(2); 
     } 
-    100% { transform: translate((0%, 0%)) }
+    100% { transform: translate((0%, 0%)) scale(1)}
   }
