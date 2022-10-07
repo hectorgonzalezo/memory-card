@@ -63,7 +63,7 @@ function Game(){
         <div id="game" >
             <Score level={level} current={score} best={previousBestScore} className={gameInactive}/>
             <CardsArea cardsNum={cardAmount} onHit={updateScore} onMiss={looseGame} className={gameInactive}/>
-            <Popup score={score} visible={popupShown} buttonClick={restartGame}/>
+            <Popup score={score} best={previousBestScore} visible={popupShown} buttonClick={restartGame}/>
         </div>
     )
 }

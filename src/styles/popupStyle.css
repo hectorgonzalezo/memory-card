@@ -15,7 +15,7 @@
 
 #pop-up h3{
     color: var(--color-font);
-        font-size: 4rem;
+        font-size: 3rem;
         font-family: rickAndMorty;
         font-style: italic;
         padding: 3px;
@@ -24,7 +24,7 @@
 }
 
 #pop-up h4{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--color-background)
 }
 #pop-up i{
@@ -33,7 +33,7 @@
 }
 
 #pop-up.visible{
-    width: 400px;
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
     top: 0;
@@ -49,7 +49,6 @@
 
 
 button{
-    font-family: 'Permanent Marker';
     font-size: 1.5rem;
     border-radius: 0.8rem;
     border: none;
@@ -82,3 +81,5 @@ button:active{
     20% { transform: skewX(0deg); }
     100% { transform: skewX(0deg); }  
   }
+
+
