@@ -3,7 +3,7 @@ import '../styles/cardStyle.css'
 
 function Card(props){
     return (
-        <div className={props.className} onClick={props.clickFunc} data={props.data}>
+        <div className={`${props.className} ${props.disappear}`} onClick={props.clickFunc} data={props.data}>
             <img src={props.image} alt="" data={props.data}/>
             <p data={props.data}>{props.name}</p>
         </div>

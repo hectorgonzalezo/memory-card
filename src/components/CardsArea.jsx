@@ -3,7 +3,6 @@ import { shuffle } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import swoosh from '../assets/swoosh.mp3';
-import uniquid from 'uniquid';
 
 const audio = new Audio(swoosh);
 
@@ -12,6 +11,9 @@ function CardsArea(props){
     // Keeps track of cards that have been pressed already
     let[pressedCards, setPressedCards] = useState([]);
     // changes depending on the level of the game
+
+    // Allows cards to disappear
+    const [disappear, setDisappear] = useState('');
 
     // This is used to stop an extra api call with react strict mode.
     let fetched = false;
@@ -60,14 +62,14 @@ function CardsArea(props){
     useEffect(() => {
         // Shuffle cards
         if(cards.length > 1){
-            console.log(pressedCards)
             if(pressedCards.length !== props.cardsNum){
+                setDisappear('disappear')
                 const shuffledCards = shuffle([...cards])
-                setCards([])
                 setTimeout(() => {
                     setCards(shuffledCards)
-                }, 0);
-                audio.play();
+                    setDisappear('')
+                    audio.play();
+                }, 500);
         }
         // update score
         props.onHit();
@@ -88,6 +90,7 @@ function CardsArea(props){
         {cards.map((card) => {
           return <Card
             className='card'
+            disappear={disappear}
             key={card.name}
             data={card.name}
             name={card.name}

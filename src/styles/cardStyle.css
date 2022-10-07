@@ -29,11 +29,24 @@
     border-radius: 1rem;
 }
 
+.disappear {
+    animation: disappear 0.5s;
+}
+
 @keyframes createBox {
     from {
       transform: scale(0);
     }
     to {
       transform: scale(1);
+    }
+  }
+
+  @keyframes disappear {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
     }
   }
