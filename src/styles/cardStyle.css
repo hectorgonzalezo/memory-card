@@ -30,7 +30,8 @@
 }
 
 .disappear {
-    animation: disappear 0.5s;
+    animation: disappear 1s;
+    transform: scale(0);
 }
 
 @keyframes createBox {
