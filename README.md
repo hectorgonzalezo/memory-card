@@ -43,7 +43,6 @@ By [Héctor González Orozco](https://github.com/hectorgonzalezo)
 
 ![Website gif](./src/assets/website.gif)
 
-
 ## Acknowledgements
 
 - Data from [The Rick and Morty API](https://rickandmortyapi.com/).

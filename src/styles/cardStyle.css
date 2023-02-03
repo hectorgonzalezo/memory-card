@@ -1,5 +1,5 @@
 .card {
-    outline: 1px solid var(--color-portal);
+    border: 1px solid var(--color-portal);
     background-color: var(--color-portal);
     color: var(--color-background);
     display: flex;
@@ -13,7 +13,7 @@
 
 .card:hover{
     cursor: pointer;
-    outline: 3px solid var(--color-morty-shirt);
+    box-shadow: 0px 0px 1px 4px var(--color-morty-shirt);
 }
 
 .card p{
